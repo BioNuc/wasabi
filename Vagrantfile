@@ -8,7 +8,8 @@
 Vagrant.configure(2) do |config|
   config.vm.define "wasabi"
 
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "bionuc/wasabi"
+  config.vm.box_version = "1.0.0"
 
   config.vm.network :forwarded_port, host: 8080, guest: 8080
 
