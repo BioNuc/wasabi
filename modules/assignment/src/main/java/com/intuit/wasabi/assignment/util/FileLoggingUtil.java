@@ -17,8 +17,8 @@ public class FileLoggingUtil {
 
     public static void logNewAssignedUser(Assignment assignment) {
         String logStatment = getLogStatement(assignment);
-        if (System.getenv("WASABI_ASSIGNMENT_FILE_NAME") != null && System.getenv("WASABI_ASSIGNMENT_FILE_PATH)") != null) {
-            String filePath = System.getenv("WASABI_ASSIGNMENT_FILE_PATH)") + '/' + System.getenv("WASABI_ASSIGNMENT_FILE_NAME");
+        if (System.getenv("WASABI_ASSIGNMENT_FILE_NAME") != null && System.getenv("WASABI_ASSIGNMENT_FILE_PATH") != null) {
+            String filePath = System.getenv("WASABI_ASSIGNMENT_FILE_PATH") + '/' + System.getenv("WASABI_ASSIGNMENT_FILE_NAME");
             writeIntoFile(filePath, logStatment);
         } else {
             writeIntoFile(defaultWasabiExpLogFile, logStatment);
