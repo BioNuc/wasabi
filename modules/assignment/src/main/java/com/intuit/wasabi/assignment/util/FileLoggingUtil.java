@@ -42,8 +42,9 @@ public class FileLoggingUtil {
 
     private static void writeIntoFile(String filePath, String statement) {
         try {
-            FileWriter fileWriter = new FileWriter(filePath);
+            FileWriter fileWriter = new FileWriter(filePath, true);
             fileWriter.write(statement);
+            fileWriter.write("\n");
             fileWriter.close();
         } catch (IOException exception) {
             LOGGER.error("Error writig to file with path " + filePath);
